@@ -16,10 +16,16 @@ const router= async()=>{
     const content= null || document.getElementById('content');
 
     header.innerHTML= await Header();
+
+ console.log("location.hash actual:", location.hash);
+
     let hash= getHash();
     let route= await resolveRoutes(hash);
+   console.log("hash:", hash, "route:", route) // este ayuda a ver lo que me esta devolviendo hash y route
     let render= routes[route] ? routes[route] : Error404;
-    content.innerHTML = await render();
+          
+    content.innerHTML= await render();
+     
 };
 
 export default router;

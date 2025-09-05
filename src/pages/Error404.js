@@ -1,7 +1,7 @@
 const Error404=()=>{
     const view=/* html */`
-    <div class="Error 404">
-    <h2>Error 404</h2>
+    <div class="Error404">
+    <h2>Error 404 <br><br>Pagina en proceso</h2>
     </div>
     `;
     return view
